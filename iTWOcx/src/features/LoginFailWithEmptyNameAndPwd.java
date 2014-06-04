@@ -1,4 +1,4 @@
-package testcases;
+package features;
 
 
 import org.junit.AfterClass;

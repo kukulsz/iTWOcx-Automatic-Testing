@@ -1,4 +1,4 @@
-package testcases;
+package features;
 
 
 import org.junit.AfterClass;
@@ -8,14 +8,14 @@ import org.junit.Test;
 import pages.LoginPage;
 import functions.LoginMgr;
 
-public class LoginFailWithInvalidPwd {
+public class LoginFailWithInvalidName {
 
 	@Test
-	public void testLoginFailWithInvalidPwd() {
-		LoginMgr.login("RIB-SS", "1234456");
+	public void testLoginFailWithInvalidUserName() {
+		LoginMgr.login("RIB-SS1", "1234");
 		Assert.assertEquals(LoginPage.lableFailLoginMsg1Text().getText(), "Login failed");
-		Assert.assertEquals(LoginPage.lableFailLoginMsg2Text().getText(), "Invalid Password");		
-	}
+		Assert.assertEquals(LoginPage.lableFailLoginMsg2Text().getText(), "Invalid Username");
+			}
 	
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {

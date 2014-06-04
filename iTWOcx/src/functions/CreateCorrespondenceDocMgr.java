@@ -18,7 +18,7 @@ public class CreateCorrespondenceDocMgr {
 	DocumentCreatingPage.txtCorDocTitle().setText(txDocTitle);
 	DocumentCreatingPage.selectDocStatus().selectVaule("OPEN");
 	DocumentCreatingPage.txtDocAction().setText("RIB-SS");
-	DocumentCreatingPage.txtDocInfo().setText("rib-rl");
+	DocumentCreatingPage.txtDocInfo().setText("rib-am");
 	DocumentCreatingPage.linkageBrowseLists().click();
 	DocumentCreatingPage.uploaAttachment().setText(Utilities.Config.UPLOAD_FILE_LOCATION);
 	DocumentCreatingPage.corDocCommonUserField().clearText();

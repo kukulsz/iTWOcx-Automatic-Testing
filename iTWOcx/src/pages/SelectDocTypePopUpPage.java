@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import Utilities.ClickableField;
+import Utilities.TextField;
 
 public class SelectDocTypePopUpPage {
 	
@@ -15,8 +16,9 @@ public class SelectDocTypePopUpPage {
 	private static final String REGISTER_LIST_LOCATION="//li[span[a[@title='Register']]]";
 	private static final String TRANSMITALLS_LIST_LOCATION="//li[span[a[@title='Transmittals']]]";
 	private static final String TRANSMITALL_LINKAGE_LOCATION="//a[@title='TX: Transmittal']";
-	private static final String CORRESPONDENCE_LIST_LOCATION="//li[span/a[contains(text(),'COR: Correspondence')]]";
+	private static final String CORRESPONDENCE_LIST_LOCATION="//li[span/a[contains(text(),'Correspondence')]]";
 	private static final String CORRESPONDENCE_LINKAGE_LOCATION="//a[contains(text(),'GEN: General Correspondence')]";
+	private static final String DOCTYPE_SEARCH_LOCATION = "//*[@id='tblList']//input";
 	
 	public static void switchToDocNewInWindow(){
 		Utilities.CommonMethod.waitForPopUp(NEW_DOCUMENT_WINDOW_LOCATION);
@@ -48,6 +50,10 @@ public class SelectDocTypePopUpPage {
 
 	public static void waitForPageToLoad(){
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	}
+
+	public static TextField txtDocTypeSearchBox() {
+		return new TextField(driver.findElement(By.xpath(DOCTYPE_SEARCH_LOCATION)));
 	}
 	
 

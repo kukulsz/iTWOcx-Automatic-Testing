@@ -81,8 +81,5 @@ public class CommonMethod {
 		Thread.sleep(60000);
 	}
 	
-	public static void sendKey(){
-		
-	}
 }
 

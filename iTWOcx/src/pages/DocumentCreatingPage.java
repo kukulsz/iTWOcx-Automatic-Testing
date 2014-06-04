@@ -35,7 +35,7 @@ public class DocumentCreatingPage {
 	private static final String FILE1_TITLE_TEXT_LOCATION="//input[@name='tit1']";
 	private static final String FILE1_NOTE_TEXT_LOCATION="//input[@name='not1']";
 	private static final String COR_DOC_TITLE_TEXT_LOCATION="tt";
-	private static final String COMMON_UF_TEXT_LOCATION="USR_COM";
+	private static final String COMMON_UF_TEXT_LOCATION="USR_CMT";
 	
 	// selector element location
 	private static final String DOC_STATUS_SELECTOR_LOCATION="mStat2";

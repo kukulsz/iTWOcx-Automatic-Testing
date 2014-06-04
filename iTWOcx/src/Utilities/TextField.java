@@ -18,6 +18,9 @@ public class TextField {
 		element.sendKeys(Keys.TAB);
 	}
 	
+	public void sendKey(Keys keyCode){
+		element.sendKeys(keyCode);
+	}
 	public void clearText(){
 		element.clear();
 	}
