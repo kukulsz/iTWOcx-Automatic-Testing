@@ -12,7 +12,7 @@ public class LoginSuccessViaEmail {
 	@Test
 	public void testLoginSuccessViaEmail() {
 		LoginMgr.login("support1@ribitwo.com.au", "1234");
-		Utilities.CommonMethod.waitForPageLoad();
+		Utilities.CommonMethod.waitForSixMin();
 	    HomePage.switchToMainFrame();
 	    HomePage.switchToContentFrame();
 		Assert.assertEquals(HomePage.lableWelcomeText().getText(), "Welcome");

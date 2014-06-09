@@ -12,7 +12,7 @@ public class LoginSuccessViaID {
 	@Test
 	public void testLoginSuccessViaID() {
 		LoginMgr.login("RIB-SS", "1234");
-		Utilities.CommonMethod.waitForPageLoad();
+		Utilities.CommonMethod.waitForSixMin();
 	    HomePage.switchToMainFrame();
 	    HomePage.switchToContentFrame();
 		Assert.assertEquals(HomePage.lableWelcomeText().getText(), "Welcome");

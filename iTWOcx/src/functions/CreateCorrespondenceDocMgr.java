@@ -6,7 +6,7 @@ import pages.SelectDocTypePopUpPage;
 
 public class CreateCorrespondenceDocMgr {
 	public static void createGENCorDocuments(String txDocTitle,String uploadFileNumber){
-	Utilities.CommonMethod.waitForPageLoad();
+	Utilities.CommonMethod.waitForSixMin();
 	HomePage.switchToProjectBarFrame();
 	HomePage.bntNewDocument().click();
 	SelectDocTypePopUpPage.switchToDocNewInWindow();

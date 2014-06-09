@@ -16,7 +16,7 @@ public class Login {
 		LoginPage.txtUNAME().setText("RIB-SS");
 		LoginPage.txtPWD().setText("1234");
 		LoginPage.bntLogin().click();
-		Utilities.CommonMethod.waitForPageLoad();
+		Utilities.CommonMethod.waitForSixMin();
 		HomePage.switchToMainFrame();
 		HomePage.switchToContentFrame();
 		Assert.assertEquals(HomePage.lableWelcomeText().getText(), "Welcome");

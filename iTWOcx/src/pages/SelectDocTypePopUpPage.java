@@ -4,6 +4,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Utilities.ClickableField;
 import Utilities.TextField;
@@ -21,7 +24,7 @@ public class SelectDocTypePopUpPage {
 	private static final String DOCTYPE_SEARCH_LOCATION = "//*[@id='tblList']//input";
 	
 	public static void switchToDocNewInWindow(){
-		Utilities.CommonMethod.waitForPopUp(NEW_DOCUMENT_WINDOW_LOCATION);
+		Utilities.CommonMethod.waitLongTimeForPopUp(NEW_DOCUMENT_WINDOW_LOCATION);
 	    driver.switchTo().window(NEW_DOCUMENT_WINDOW_LOCATION);
 	}
 	
@@ -57,4 +60,8 @@ public class SelectDocTypePopUpPage {
 	}
 	
 
+	public static void waitForSearchDocTypeBoxToLoad() {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='tblList']//input")));		
+	}
 }

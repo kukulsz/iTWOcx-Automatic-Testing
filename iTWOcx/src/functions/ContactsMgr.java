@@ -9,7 +9,7 @@ public class ContactsMgr {
 	public static void createCompany(String companyName, String companyNo,String companyID) {
 		HomePage.switchToProjectBarFrame();
 		HomePage.bntGoToContacts().click();
-		Utilities.CommonMethod.waitForPageLoad();
+		Utilities.CommonMethod.waitForSixMin();
 		HomePage.switchToDefaultContent();
 		HomePage.switchToDefaultFrame();
 		HomePage.switchToMainFrame();
@@ -26,7 +26,7 @@ public class ContactsMgr {
 		CompanyDetailPage.txtCompanyID().setText(companyID);
 		CompanyDetailPage.selectCompanyRole().selectVaule("CLI");
 		CompanyDetailPage.bntSaveCompany().click();
-		Utilities.CommonMethod.waitForPageLoad();		
+		Utilities.CommonMethod.waitForSixMin();		
 	}
 	
 	
@@ -36,7 +36,7 @@ public class ContactsMgr {
 		HomePage.switchToMainFrame();
 		CompanyListPage.switchToListFrame();
 		CompanyListPage.linkageCompanyName();
-		Utilities.CommonMethod.waitForPageLoad();
+		Utilities.CommonMethod.waitForSixMin();
 		UserCreatingPage.txtUserEmail().setText(emailAddress);
 		UserCreatingPage.txtFirstName().setText(firstName);
 		UserCreatingPage.txtLastName().setText(lastName);

@@ -15,10 +15,11 @@ public class CreateNewCorDoc {
 	@Test
 	public void createGenSuccessfully(){
 		LoginMgr.login("RIB-SS", "1234");
-		Utilities.CommonMethod.waitForPageLoad();
+		Utilities.CommonMethod.waitForSixMin();
 		HomePage.switchToProjectBarFrame();
 		HomePage.bntNewDocument().click();
 		SelectDocTypePopUpPage.switchToDocNewInWindow();
+		SelectDocTypePopUpPage.waitForSearchDocTypeBoxToLoad();
 		SelectDocTypePopUpPage.txtDocTypeSearchBox().setText("GEN: General Correspondence");
 		SelectDocTypePopUpPage.txtDocTypeSearchBox().sendKey(Keys.DOWN);
 		SelectDocTypePopUpPage.txtDocTypeSearchBox().sendKey(Keys.ENTER);

@@ -4,6 +4,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import Utilities.ClickableField;
 import Utilities.LableField;
 
@@ -47,7 +50,8 @@ public class HomePage {
 	}
 	
 	public static void switchToProjectBarFrame(){
-	    driver.switchTo().frame(PROJECT_BAR_FRAME_LOCATION);
+		Utilities.Frame.waitForFrameandSwitchToItByName(driver, PROJECT_BAR_FRAME_LOCATION);
+
 	}
 	
 	public static void switchToDefaultContent(){

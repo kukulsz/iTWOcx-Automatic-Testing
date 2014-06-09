@@ -8,6 +8,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
@@ -40,7 +41,7 @@ public class CommonMethod {
 	}
 	
 	
-	public static void waitForPageLoad(){
+	public static void waitForSixMin(){
 		Utilities.Config.getSelenium().waitForPageToLoad("60000");
 	}
 	
@@ -49,7 +50,7 @@ public class CommonMethod {
 	}
 	
 	public static void waitLongTimeForPopUp(String windID){
-		Utilities.Config.getSelenium().waitForPopUp(windID,"120000");
+		Utilities.Config.getSelenium().waitForPopUp(windID,"1200000");
 	}
 	
 	public static void waitForFrameToLoad(String frameSrc){

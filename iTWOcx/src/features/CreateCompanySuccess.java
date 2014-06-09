@@ -39,7 +39,7 @@ public class CreateCompanySuccess {
 		String companyName="Company Name"+randomNo;
 		String companyNo="Number"+randomNo;
 		String companyID="ID"+randomNo;
-		Utilities.CommonMethod.waitForPageLoad();
+		Utilities.CommonMethod.waitForSixMin();
 		ContactsMgr.createCompany(companyName, companyNo, companyID);
 		HomePage.switchToDefaultContent();
 		HomePage.switchToDefaultFrame();

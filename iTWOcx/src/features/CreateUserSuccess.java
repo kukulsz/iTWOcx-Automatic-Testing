@@ -35,7 +35,7 @@ public class CreateUserSuccess {
 		
 		LoginMgr.login("rib-ss","1234");
 		CompanyListPage.companyName=companyName;
-		Utilities.CommonMethod.waitForPageLoad();
+		Utilities.CommonMethod.waitForSixMin();
 		ContactsMgr.createCompany(companyName, companyNo, companyID);
 	}
 
@@ -47,7 +47,7 @@ public class CreateUserSuccess {
 	public void testCreateUserSuccess() {
 	
 		ContactsMgr.createUser(companyName, emailAddress, "auto", "name");
-		Utilities.CommonMethod.waitForPageLoad();
+		Utilities.CommonMethod.waitForSixMin();
 		HomePage.switchToDefaultContent();
 		HomePage.switchToDefaultFrame();
 		HomePage.switchToMainFrame();
